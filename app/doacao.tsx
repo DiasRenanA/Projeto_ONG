@@ -1,4 +1,4 @@
-import { Doacao } from "@/src/screens/navigation/doacao";
+import { Doacao } from "@/src/screens/DoacaoScreen/doacao";
 
 
 export default function doacao(){

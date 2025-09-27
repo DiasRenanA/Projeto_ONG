@@ -1,35 +1,6 @@
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { StyleSheet } from "react-native";
 
-type typeButton = {
-  titulo: string;
-  onPress: () => void;
-};
-
-export function ButtonBig({ titulo, onPress }: typeButton) {
-    return(
-        <TouchableOpacity style={styles.buttonBig} onPress={onPress} activeOpacity={0.7}>
-            <Text style={styles.textButtonBig}>{titulo}</Text>
-        </TouchableOpacity>
-    )
-}
-
-export function ButtonMenu({titulo, onPress}: typeButton){
-    return(
-        <TouchableOpacity style={styles.buttonMenu} onPress={onPress} activeOpacity={0.7}>
-            <Text style={styles.textButtonMenu}>{titulo}</Text>
-        </TouchableOpacity>
-    )
-}
-
-export function ButtonVoltar({titulo, onPress}: typeButton){
-    return(
-        <TouchableOpacity style={styles.buttonVoltar} onPress={onPress} activeOpacity={0.7}>
-            <Text style={styles.textButtonVoltar}>{titulo}</Text>
-        </TouchableOpacity>
-    )
-}
-
-const styles = StyleSheet.create({
+export const Styles = StyleSheet.create({
     buttonBig: {
         backgroundColor: '#F6FD32',
         paddingVertical: 15,      

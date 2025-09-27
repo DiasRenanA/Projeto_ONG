@@ -1,4 +1,4 @@
-import { Contato } from "@/src/screens/navigation/contato";
+import { Contato } from "@/src/screens/ContatoScreen/contato";
 
 export default function contato(){
     return(
