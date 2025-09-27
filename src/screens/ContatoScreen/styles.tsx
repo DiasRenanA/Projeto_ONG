@@ -8,6 +8,7 @@ export const Styles = StyleSheet.create({
 
     container: {
         alignItems: 'center',
+        paddingHorizontal: 35,
     },
 
     headText: {
@@ -22,8 +23,7 @@ export const Styles = StyleSheet.create({
     bodyText: {
         fontSize: 15,
         color: '#fff',
-        textAlign: 'center',
-        paddingHorizontal: 35,
+        textAlign: 'left',
         marginBottom: 20
     },
 
@@ -47,5 +47,12 @@ export const Styles = StyleSheet.create({
         justifyContent: 'center',
         gap: 10,
         marginBottom: 30
+    },
+
+    listContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 10,
+        width: '100%',
     }
 })

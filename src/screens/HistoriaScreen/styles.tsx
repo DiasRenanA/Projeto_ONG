@@ -8,6 +8,10 @@ export const Styles = StyleSheet.create({
 
     container: {
         alignItems: 'center',
+        paddingHorizontal: '10%',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 20,
     },
 
     headText: {
@@ -22,21 +26,11 @@ export const Styles = StyleSheet.create({
     bodyText: {
         fontSize: 15,
         color: '#fff',
-        textAlign: 'center',
-        paddingHorizontal: 35,
-        marginBottom: 20
+        textAlign: 'left',
     },
 
     textDestacadosYellow: {
         color: '#F6FD32',
-    },
-
-    linha: {
-        marginVertical: 20,
-        height: 3,                   
-        width: '80%',                
-        backgroundColor: '#FFFFFF', 
-        borderRadius: 5,           
     },
 
     ButtonsMenu: {
@@ -46,6 +40,13 @@ export const Styles = StyleSheet.create({
         width: '90%',
         justifyContent: 'center',
         gap: 10,
-        marginBottom: 30
-    }
+        marginBottom: 30,
+    },
+
+    imagens: {
+        width: '100%',
+        height: '30%',
+        resizeMode: 'contain'
+    },
+
 })

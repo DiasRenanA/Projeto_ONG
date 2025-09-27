@@ -7,7 +7,7 @@ export const Head = () => {
             <Text style={Styles.texto}>ONG</Text>
             <Image
                 style={Styles.logo}
-                source={require('../screens/images/Logo.png')}
+                source={require('../../screens/images/Logo.png')}
             />
             <Text style={Styles.texto}>Jacira</Text>
         </View>

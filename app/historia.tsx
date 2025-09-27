@@ -1,4 +1,4 @@
-import { Historia } from "@/src/screens/HistoriaScreen/historia"
+import { Historia } from "@/src/screens/HistoriaScreen"
 
 export default function historia(){
     return(

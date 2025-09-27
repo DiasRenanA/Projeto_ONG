@@ -9,24 +9,47 @@ export const Styles = StyleSheet.create({
     container: {
         alignItems: 'center',
         paddingHorizontal: '10%',
-        paddingBottom: 20,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 20,
     },
 
     headText: {
         color: '#fff',
         fontSize: 25,
         fontWeight: 'bold',
+        paddingTop: 18,
         marginBottom: 10,
         textAlign: 'center',
-        paddingVertical: 10,
     },
 
-    itensView:{
+    bodyText: {
+        fontSize: 15,
+        color: '#fff',
+        textAlign: 'left',
+    },
+
+    textDestacadosYellow: {
+        color: '#F6FD32',
+    },
+
+    ButtonsMenu: {
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        width: '90%',
+        justifyContent: 'center',
+        gap: 10,
+        marginBottom: 30,
+    },
+
+        itensView:{
         display: 'flex',
         flexDirection: 'column',
         paddingLeft: '5%',
         gap: 10,
-        paddingBottom: 20
+        paddingBottom: 20,
+        width: '100%'
     },
 
     itensText:{
@@ -34,14 +57,4 @@ export const Styles = StyleSheet.create({
         flex: 1,
     },
 
-    textDestacadosYellow: {
-        color: '#F6FD32',
-    },
-
-    bodyText: {
-        fontSize: 15,
-        color: '#fff',
-        textAlign: 'left',
-        marginBottom: 20
-    }
 })

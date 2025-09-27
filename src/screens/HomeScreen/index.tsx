@@ -29,8 +29,8 @@ export const Home = () => {
         router.push('/resultados');
     };
 
-    const irParaComentarios = () => {
-        router.push('/comentarios');
+    const irParaFeedBack = () => {
+        router.push('/feedBack');
     };
 
     const irParaPerguntas = () => {
@@ -90,7 +90,7 @@ export const Home = () => {
 
                 <ButtonMenu
                     titulo="Comentários" 
-                    onPress={irParaComentarios} 
+                    onPress={irParaFeedBack} 
                 />
 
                 <ButtonMenu

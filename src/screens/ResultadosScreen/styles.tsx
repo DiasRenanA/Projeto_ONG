@@ -33,14 +33,6 @@ export const Styles = StyleSheet.create({
         color: '#F6FD32',
     },
 
-    linha: {
-        marginVertical: 20,
-        height: 3,                   
-        width: '80%',                
-        backgroundColor: '#FFFFFF', 
-        borderRadius: 5,           
-    },
-
     ButtonsMenu: {
         display: 'flex',
         flexDirection: 'row',
@@ -51,28 +43,24 @@ export const Styles = StyleSheet.create({
         marginBottom: 30,
     },
 
-
-    h2Container: {
+    imagens: {
         width: '100%',
-        fontWeight: '900',
+        height: '30%',
+        resizeMode: 'contain'
     },
 
-    h2Text: {
-        fontWeight: 'bold',
-        fontSize: 15,
-        color: '#fff',
-        textAlign: 'left',
-    },
-
-    listContainer: {
-        width: '100%',
+    itensView:{
         display: 'flex',
         flexDirection: 'column',
+        paddingLeft: '5%',
         gap: 10,
-        paddingLeft: 10,
+        paddingBottom: 20,
+        width: '100%'
     },
 
-    subListContainer: {
-        paddingLeft: 10,
-    }
+    itensText:{
+        color: '#fff',
+        flex: 1,
+    },
+
 })
