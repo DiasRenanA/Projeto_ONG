@@ -51,6 +51,7 @@ export const Styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
+        borderRadius: 10,
     },
 
     textButtonVoltar: {

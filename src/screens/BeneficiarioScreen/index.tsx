@@ -1,12 +1,15 @@
 import { ButtonVoltar } from "@/src/components/buttonsComponent/buttons";
 import { Head } from "@/src/components/headComponent/head";
-import { Alert, ScrollView, Text, View } from "react-native";
+import { useState } from "react";
+import { Alert, Image, ScrollView, Text, TextInput, View } from "react-native";
 import { Styles } from "./styles";
 
 export const Beneficiario = () =>{
     const handlePress = () => {
         Alert.alert('Botão Pressionado!', 'A ação do beneficiário seria iniciada aqui.');
     };
+
+    const [texto, setTexto] = useState('');
     return (
         <ScrollView 
             style={Styles.scrollView}
@@ -17,6 +20,29 @@ export const Beneficiario = () =>{
                 {'\n'}
                 Então venha, é <Text style={Styles.textDestacadosYellow}>fácil!</Text>
             </Text>
+
+            <View style={Styles.boxInputContainer}>
+                <Text style={Styles.boxInputText}>Antes de começar, vamos saber se seu  <Text style={Styles.textDestacadosYellow}>CEP</Text> está no raio de doação da ONG?
+                </Text>
+
+                <TextInput
+                    style={Styles.boxInputInput}
+                    onChangeText={setTexto}
+                    value={texto}
+                    placeholder="Digite seu cep aqui:"
+                >
+
+                </TextInput>
+
+                <Image 
+                    source={require('../../screens/images/ok_icon.svg')}
+                />
+
+                <Text style={Styles.boxInputText}>
+                    Esse cep é atendido pela ONG!
+                </Text>
+
+            </View>
 
             <Text style={Styles.bodyText}>Para receber o benefício de distribuição de leite pela nossa ONG, o processo de cadastro é simples e feito em parceria com o CRAS (Centro de Referência de Assistência Social). Siga os passos abaixo para garantir que você ou sua família sejam elegíveis para o programa:</Text>
 
