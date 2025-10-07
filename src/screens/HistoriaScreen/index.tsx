@@ -1,12 +1,8 @@
-import { ButtonVoltar } from "@/src/components/buttonsComponent/buttons";
 import { Head } from "@/src/components/headComponent/head";
-import { Alert, Image, ScrollView, Text } from "react-native";
+import { Image, ScrollView, Text } from "react-native";
 import { Styles } from "./styles";
 
 export const Historia = () => {
-    const handlePress = () => {
-        Alert.alert('Botão Pressionado!', 'A ação do beneficiário seria iniciada aqui.');
-    };
     return (
         <ScrollView 
             style={Styles.scrollView}
@@ -37,11 +33,6 @@ export const Historia = () => {
         <Text style={Styles.bodyText}>Dona Jacira acredita que a verdadeira mudança vem do apoio mútuo e da empatia. Através de sua ONG, ela oferece mais do que leite e aulas: ela oferece esperança, dignidade e uma rede de suporte para aqueles que mais precisam. Se você quer fazer parte dessa corrente do bem, seja se cadastrando para receber o benefício ou contribuindo com doações, está no lugar certo.</Text>
 
         <Text style={Styles.bodyText}>Aqui, cada gesto conta, cada doação transforma, e cada abraço acolhe. Com amor e dedicação, Dona Jacira inspira uma comunidade inteira a cuidar uns dos outros, com o coração aberto. Sua missão vai além do alimento: ela nutre sonhos, fortalece laços e planta sementes de um futuro mais humano e justo. Venha fazer parte dessa caminhada e descubra como pequenos atos podem gerar grandes mudanças.</Text>
-
-        <ButtonVoltar
-            titulo = 'Voltar'
-            onPress = {handlePress}
-        />
 
         </ScrollView>
         

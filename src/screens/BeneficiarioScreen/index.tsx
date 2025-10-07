@@ -1,4 +1,3 @@
-import { ButtonVoltar } from "@/src/components/buttonsComponent/buttons";
 import { Head } from "@/src/components/headComponent/head";
 import axios from 'axios';
 import { useState } from "react";
@@ -6,9 +5,6 @@ import { Alert, Image, ScrollView, Text, TextInput, View } from "react-native";
 import { Styles } from "./styles";
 
 export const Beneficiario = () =>{
-    const handlePress = () => {
-        Alert.alert('Botão Pressionado!', 'A ação do beneficiário seria iniciada aqui.');
-    };
 
     const [cep, setCep] = useState('');
     const [endereco, setEndereco] = useState(null);
@@ -98,11 +94,6 @@ export const Beneficiario = () =>{
             </View>
 
             <Text style={Styles.bodyText}><Text style={Styles.textDestacadosYellow}>4. Acompanhe sua inscrição: </Text>Se essa for sua primeira vez, você receberá a confirmação do cadastro por telefone. Lembre-se, é importante levar sua carteirinha toda vez que for retirar o leite.</Text>
-
-            <ButtonVoltar
-                titulo = 'Voltar'
-                onPress = {handlePress}
-            />
 
         </ScrollView>
         

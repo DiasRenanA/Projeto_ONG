@@ -1,12 +1,8 @@
-import { ButtonVoltar } from "@/src/components/buttonsComponent/buttons";
 import { Head } from "@/src/components/headComponent/head";
-import { Alert, Image, ScrollView, Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 import { Styles } from "./styles";
 
 export const Resultados = () => {
-    const handlePress = () => {
-        Alert.alert('Botão Pressionado!', 'A ação do beneficiário seria iniciada aqui.');
-    };
     return (
         <ScrollView 
             style={Styles.scrollView}
@@ -33,12 +29,6 @@ export const Resultados = () => {
         />
 
         <Text style={Styles.bodyText}>Cada número aqui representa vidas transformadas e histórias de esperança. Com sua ajuda, podemos ir ainda mais longe!</Text>
-
-
-        <ButtonVoltar
-            titulo = 'Voltar'
-            onPress = {handlePress}
-        />
 
         </ScrollView>
         

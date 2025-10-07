@@ -1,12 +1,8 @@
-import { ButtonVoltar } from "@/src/components/buttonsComponent/buttons";
 import { Head } from "@/src/components/headComponent/head";
-import { Alert, ScrollView, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import { Styles } from "./styles";
 
 export const Doacao = () => {
-    const handlePress = () => {
-        Alert.alert('Botão Pressionado!', 'A ação do beneficiário seria iniciada aqui.');
-    };
     return (
         <ScrollView 
             style={Styles.scrollView}
@@ -52,11 +48,6 @@ export const Doacao = () => {
         </View>
 
         <Text style={Styles.bodyText}>Cada contribuição é um passo a mais para manter viva a missão da Dona Jacira e da nossa ONG. Agradecemos imensamente sua generosidade!</Text>
-
-        <ButtonVoltar
-            titulo = 'Voltar'
-            onPress = {handlePress}
-        />
 
         </ScrollView>
         

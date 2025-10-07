@@ -1,5 +1,5 @@
 import { Head } from "@/src/components/headComponent/head";
-import { Alert, Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 import { Styles } from "./styles";
 
 // Para o exemplo, vou usar a mesma imagem várias vezes. 
@@ -11,9 +11,6 @@ const turma = require('../../screens/images/turma.jpg');
 const comunidade = require('../../screens/images/comunidade.jpg');
 
 export const Imagens = () => {
-    const handlePress = () => {
-        Alert.alert('Botão Pressionado!', 'A ação do botão "Voltar" seria executada aqui.');
-    };
 
     return (
         <ScrollView 
@@ -52,11 +49,6 @@ export const Imagens = () => {
                 style={Styles.imageFull}
                 source={comunidade}
             />
-
-            {/* Botão Voltar */}
-            <TouchableOpacity style={Styles.button} onPress={handlePress}>
-                <Text style={Styles.buttonText}>Voltar</Text>
-            </TouchableOpacity>
 
         </ScrollView>
     );

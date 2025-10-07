@@ -1,12 +1,8 @@
-import { ButtonVoltar } from "@/src/components/buttonsComponent/buttons";
 import { Head } from "@/src/components/headComponent/head";
-import { Alert, ScrollView, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import { Styles } from "./styles";
 
 export const Contato = () => {
-    const handlePress = () => {
-        Alert.alert('Botão Pressionado!', 'A ação do beneficiário seria iniciada aqui.');
-    };
     return(
             <ScrollView 
                     style={Styles.scrollView}
@@ -53,11 +49,6 @@ export const Contato = () => {
                     ◉ Horário de Atendimento: </Text>
                     Presencial: Segunda a sexta, das 8h às 17h
                 </Text>
-        
-                <ButtonVoltar
-                    titulo = 'Voltar'
-                    onPress = {handlePress}
-                />
         
             </ScrollView>
     )

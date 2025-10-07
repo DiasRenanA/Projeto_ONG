@@ -1,12 +1,8 @@
-import { ButtonVoltar } from "@/src/components/buttonsComponent/buttons";
 import { Head } from "@/src/components/headComponent/head";
-import { Alert, ScrollView, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import { Styles } from "./styles";
 
 export const Perguntas = () => {
-    const handlePress = () => {
-        Alert.alert('Botão Pressionado!', 'A ação do beneficiário seria iniciada aqui.');
-    };
     return (
         <ScrollView 
             style={Styles.scrollView}
@@ -35,11 +31,6 @@ export const Perguntas = () => {
             <Text style={Styles.itensText}>6. Onde encontro os dados para doação em dinheiro?</Text>
             <Text style={Styles.itensText}>Você pode doar via PIX ou depósito bancário. Os dados completos estão na seção “Doe Agora” do site.</Text>
         </View>
-
-        <ButtonVoltar
-            titulo = 'Voltar'
-            onPress = {handlePress}
-        />
 
         </ScrollView>
         

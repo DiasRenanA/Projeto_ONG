@@ -1,12 +1,8 @@
-import { ButtonVoltar } from "@/src/components/buttonsComponent/buttons";
 import { Head } from "@/src/components/headComponent/head";
-import { Alert, ScrollView, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import { Styles } from "./styles";
 
 export const FeedBack = () => {
-    const handlePress = () => {
-        Alert.alert('Botão Pressionado!', 'A ação do beneficiário seria iniciada aqui.');
-    };
     return (
         <ScrollView 
             style={Styles.scrollView}
@@ -25,11 +21,6 @@ export const FeedBack = () => {
             <Text style={Styles.itensText}>5. Dona Jacira - Fundadora da ONG
             "Cada gota de leite, cada fio de crochê e cada sorriso recebido faz meu coração feliz. Estamos juntos nessa missão!"</Text>
         </View>
-
-        <ButtonVoltar
-            titulo = 'Voltar'
-            onPress = {handlePress}
-        />
 
         </ScrollView>
         
