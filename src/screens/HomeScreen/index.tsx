@@ -53,7 +53,7 @@ export const Home = () => {
             <Text style={Styles.bodyText}>Dona Jacira acredita profundamente que a verdadeira transformação social surge do apoio mútuo, da empatia genuína e da união entre as pessoas. Se você quer fazer parte dessa corrente do bem, seja se cadastrando para receber o benefício ou contribuindo com doações, está no lugar certo. Junte-se a nós e ajude a multiplicar essa história de <Text style={Styles.textDestacadosYellow}>solidariedade.</Text></Text>
 
             <ButtonBig
-                titulo="Quero Doar" 
+                titulo="Ser Beneficiário" 
                 onPress={irParaBeneficiario} 
             />
 

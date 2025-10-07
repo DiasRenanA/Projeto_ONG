@@ -1,5 +1,6 @@
 import { ButtonVoltar } from "@/src/components/buttonsComponent/buttons";
 import { Head } from "@/src/components/headComponent/head";
+import axios from 'axios';
 import { useState } from "react";
 import { Alert, Image, ScrollView, Text, TextInput, View } from "react-native";
 import { Styles } from "./styles";
@@ -9,7 +10,41 @@ export const Beneficiario = () =>{
         Alert.alert('Botão Pressionado!', 'A ação do beneficiário seria iniciada aqui.');
     };
 
+    const [cep, setCep] = useState('');
+    const [endereco, setEndereco] = useState(null);
     const [texto, setTexto] = useState('');
+
+    const buscarCep = async () => {
+        setTexto('');
+        setEndereco(null);
+
+        if (cep.length !== 8) {
+            Alert.alert('Erro', 'O CEP deve conter 8 dígitos.');
+            return;
+        }
+
+        try{
+            await axios.get(`https://viacep.com.br/ws/${cep}/json/`).then((response) => {
+                const {data} = response;
+                console.log('RESPOSTA API', data.bairro);
+                if (data.erro) {
+                    setTexto('CEP não encontrado');
+                } else {
+                    if (data.bairro == 'Jardim São Judas Tadeu'){
+                        setTexto("Esse CEP é atendido pela ONG!");
+                    } else {
+                        setTexto("Esse CEP não é atendido pela ONG!");
+                    }
+                }
+            })
+        }catch (error){
+            Alert.alert('Erro', 'Houve um problema ao se conectar com a API.');
+        }
+        
+
+    }
+
+
     return (
         <ScrollView 
             style={Styles.scrollView}
@@ -27,19 +62,22 @@ export const Beneficiario = () =>{
 
                 <TextInput
                     style={Styles.boxInputInput}
-                    onChangeText={setTexto}
-                    value={texto}
+                    value={cep}
                     placeholder="Digite seu cep aqui:"
+                    onChangeText={setCep}
+                    keyboardType="numeric"
+                    maxLength={8}
+
                 >
 
                 </TextInput>
 
-                <Image 
-                    source={require('../../screens/images/ok_icon.svg')}
-                />
+                <button style={{backgroundColor: '#7d9d87', border: 'none'}} onClick={buscarCep}>
+                    <Image source={require('../../screens/images/ok_icon.svg')}/>
+                </button>
 
                 <Text style={Styles.boxInputText}>
-                    Esse cep é atendido pela ONG!
+                    {texto}
                 </Text>
 
             </View>
